@@ -555,9 +555,37 @@
     </footer>
 
     <script>
-
-
-
+// Mobile menu toggle fix for community.html
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if we're on the community page
+    if (document.querySelector('body').classList.contains('community-page')) {
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileToggle && navMenu) {
+            // Enhanced click handler
+            mobileToggle.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent event bubbling
+                navMenu.classList.toggle('active');
+                mobileToggle.classList.toggle('active');
+                
+                // Toggle aria-expanded for accessibility
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.navbar') && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileToggle.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    }
+});
+</script>
     <!-- JavaScript -->
     <script src="main.js"></script>
     <script src="community.js"></script>
@@ -565,3 +593,4 @@
 </body>
 
 </html>
+
