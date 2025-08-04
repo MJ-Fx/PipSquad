@@ -20,66 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-    <styles>
-        /* About Hero Section - Fixed for Mobile */
-.about-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem 1rem;
-}
-
-.about-hero-content {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-}
-
-.about-hero-image {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.about-hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Responsive Adjustments */
-@media (min-width: 768px) {
-    .about-hero {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
-    }
-    
-    .about-hero-content {
-        flex: 1;
-        text-align: left;
-    }
-    
-    .about-hero-image {
-        flex: 1;
-        max-width: 500px;
-    }
-}
-
-/* Remove any conflicting styles */
-.hero-image,
-.hero-graphic,
-.chart-animation {
-    /* Reset any conflicting styles from other hero sections */
-    clip-path: none !important;
-    height: auto !important;
-    position: static !important;
-}
-    </styles>
 <body>
     <!-- Header/Navigation - Consistent with index.html -->
     <header class="header">
@@ -126,7 +66,7 @@
                             <li><a href="tools-resources.html">Indicators & Tools</a></li>
                         </ul>
                     </li>
-                    </li>
+                    
                     <li><a href="fundamental-analysis.html">Fundamental Analysis</a></li>
                     
                     <li><a href="tools-resources.html">Tools & Resources</a></li>
@@ -385,8 +325,4 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="main.js"></script>
 <script src="about-animations.js"></script>
 </body>
-
 </html>
-
-
-
