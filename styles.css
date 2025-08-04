@@ -302,6 +302,7 @@ ul {
 .hero-content {
     flex: 1;
     max-width: 600px;
+    margin-top: 10px;
 }
 
 .hero-title {
@@ -6226,4 +6227,5 @@ section[id] {
         display: block; /* Show when active */
     }
 }
+
 
