@@ -6229,3 +6229,39 @@ section[id] {
 }
 
 
+
+/* Add this to your CSS */
+:root {
+  --header-height: 80px; /* Adjust this to match your header's height */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--header-height) + 20px); /* Header height + extra space */
+    margin-top: 0; /* Remove any margin-top on mobile */
+    min-height: calc(100vh - var(--header-height)); /* Adjust viewport height calculation */
+  }
+
+  .hero .container {
+    min-height: calc(100vh - var(--header-height) - 40px); /* Further adjustment */
+    margin-top: 0; /* Remove margin-top on mobile */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem; /* Smaller font on mobile */
+    margin-top: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
