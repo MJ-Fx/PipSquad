@@ -285,7 +285,7 @@ ul {
 
 /* Hero Section */
 .hero {
-    margin-top: 2%;
+    margin-top: 5%;
     background: linear-gradient(135deg, var(--color-lighter), var(--color-light));
     position: relative;
     overflow: hidden;
@@ -296,6 +296,7 @@ ul {
     display: flex;
     align-items: center;
     min-height: calc(100vh - 120px);
+    margin-top: 30px;
 }
 
 .hero-content {
@@ -6225,3 +6226,4 @@ section[id] {
         display: block; /* Show when active */
     }
 }
+
