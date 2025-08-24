@@ -221,6 +221,67 @@ ul {
     transition: var(--transition-medium);
 }
 
+/* Add to your existing mobile styles */
+@media (max-width: 768px) {
+    /* Prevent horizontal scrolling */
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Ensure navigation fits within screen */
+    .nav-menu {
+        width: 100%;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+    
+    .nav-menu > li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .nav-menu > li > a {
+        padding: 15px 0;
+        display: block;
+        font-weight: 600;
+    }
+    
+    /* Adjust container padding for mobile */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Fix hero section spacing on mobile */
+    .hero {
+        padding-top: 90px;
+        margin-top: 0;
+    }
+    
+    .hero .container {
+        min-height: auto;
+        margin-top: 0;
+        padding: 20px 0;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .nav-menu {
+        padding: 10px 0;
+    }
+}
+
 /* Hero Section */
 .hero {
     margin-top: 5%;
@@ -6198,6 +6259,7 @@ section[id] {
     max-width: 100%;
   }
 }
+
 
 
 
